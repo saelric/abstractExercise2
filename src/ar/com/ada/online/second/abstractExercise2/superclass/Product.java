@@ -1,4 +1,4 @@
-package ar.com.ada.online.second.execirsetwo.superclass;
+package ar.com.ada.online.second.abstractExercise2.superclass;
 
 import java.util.Objects;
 
