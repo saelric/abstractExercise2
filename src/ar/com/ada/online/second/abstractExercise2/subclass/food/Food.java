@@ -1,18 +1,19 @@
-package ar.com.ada.online.second.abstractExercise2.subclass;
+package ar.com.ada.online.second.abstractExercise2.subclass.food;
 
 import ar.com.ada.online.second.abstractExercise2.superclass.Product;
 
 import java.util.Objects;
 
-public class Toy extends Product {
-    protected final Double DISCOUNT = 0.25;
+public class Food extends Product {
+    protected final Double DISCOUNT = 0.1;
 
-    public Toy(){
-
-    }
-    public Toy(String name, Double listPrice, Double discountPrice ){
+    public Food(){
 
     }
+    public Food(String name, Double listPrice, Double discountPrice ){
+
+    }
+
 
     @Override
     public void calculateDiscount(){
@@ -20,7 +21,7 @@ public class Toy extends Product {
     }
     @Override
     public String toString() {
-        return String.format("Toy { DISCOUNT = "
+        return String.format("Food { DISCOUNT = "
                 + this.DISCOUNT +
                 ", name = "
                 + this.name +
@@ -29,7 +30,7 @@ public class Toy extends Product {
                 ", discountPrice"
                 + this.discountPrice
         );
-1
+
     }
 
     @Override
@@ -41,8 +42,9 @@ public class Toy extends Product {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || this.getClass() != obj.getClass()) return false;
-        Toy that = (Toy) obj;
+        Food that = (Food) obj;
         return super.equals(obj) &&
                 name.equals(that.DISCOUNT);
     }
+
 }
