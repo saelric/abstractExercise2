@@ -5,7 +5,7 @@ import ar.com.ada.online.second.abstractExercise2.superclass.Product;
 import java.util.Objects;
 
 public class Clothe extends Product {
-    protected String category;
+    protected int category;
     protected final Double DISCOUNT = 0.15;
 
     public Clothe(){
@@ -15,7 +15,7 @@ public class Clothe extends Product {
 
     }
 
-    public String getCategory() {
+    public int getCategory() {
         return category;
     }
 
@@ -25,7 +25,10 @@ public class Clothe extends Product {
 
     @Override
     public void calculateDiscount(){
-        discountPrice = listPrice * DISCOUNT;
+        if (category == 1) {
+            discountPrice = listPrice * DISCOUNT;
+        }
+
     }
 
     @Override

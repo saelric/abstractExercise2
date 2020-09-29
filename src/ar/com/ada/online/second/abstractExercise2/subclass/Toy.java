@@ -16,7 +16,9 @@ public class Toy extends Product {
 
     @Override
     public void calculateDiscount(){
-        discountPrice = listPrice * DISCOUNT;
+        if (ShoppingCart.amountOfToys > 3 || this.listPrice > 3000){
+            discountPrice = listPrice * DISCOUNT;
+        }
     }
     @Override
     public String toString() {
@@ -29,7 +31,6 @@ public class Toy extends Product {
                 ", discountPrice"
                 + this.discountPrice
         );
-1
     }
 
     @Override

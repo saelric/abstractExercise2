@@ -1,7 +1,9 @@
 package ar.com.ada.online.second.abstractExercise2.subclass.food;
 
+import ar.com.ada.online.second.abstractExercise2.subclass.ShoppingCart;
 import ar.com.ada.online.second.abstractExercise2.superclass.Product;
 
+import java.util.Calendar;
 import java.util.Objects;
 
 public class Food extends Product {
@@ -17,7 +19,9 @@ public class Food extends Product {
 
     @Override
     public void calculateDiscount(){
-        discountPrice = listPrice * DISCOUNT;
+        if (ShoppingCart.dayOfWeek.equals("Tuesday") || ShoppingCart.dayOfWeek.equals("Thursday")){
+            discountPrice = listPrice * DISCOUNT;
+        }
     }
     @Override
     public String toString() {

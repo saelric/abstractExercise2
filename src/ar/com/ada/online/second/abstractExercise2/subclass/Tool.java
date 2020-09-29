@@ -15,9 +15,12 @@ public class Tool extends Product {
     }
 
     @Override
-    public void calculateDiscount(){
-        discountPrice = listPrice * DISCOUNT;
+    public void calculateDiscount() {
+        if (ShoppingCart.paymentMethod == 2){
+            discountPrice = listPrice * DISCOUNT;
+        }
     }
+
     @Override
     public String toString() {
         return String.format("Tool { DISCOUNT = "
